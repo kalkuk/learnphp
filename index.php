@@ -111,4 +111,56 @@ $answer = sum(1,2);
 var_dump($answer);
 var_dump(sum(3,5));
 
+// $num =11;
+//if ($num >10);{
+ //   var_dump('suurem');
+//} else if($num ===10) {
+  //  var_dump('vürdne');
+//} else {
+  //  var_dump('väiksem');
+//}
 
+
+switch($num){
+    case 1:
+        echo 'üks';
+        break;
+        case 2:
+            echo 'kaks';
+            break;
+    default:
+            echo 'midagi muud';
+}
+
+for($i=0; $i<10;$i++){
+    var_dump($i);
+}
+for($i=1; $i<100;$i+=5){
+    var_dump($i);
+}
+
+for(;;){
+    var_dump('hello');
+}
+
+
+$date =time();
+while(time()<$date+30){
+    var_dump('hello');
+}
+
+do{
+    var_dump('do while');
+} while($i>0);
+
+$array = [1, 2, 3, 4];
+for($i=0; $i<count($array);$i++){
+    var_dump($array[$i]);
+        
+    }
+foreach($array as $value){
+    var_dump($value);
+}
+foreach($array as $key=>$value){
+    var_dump($key . ':' .$value);
+}
