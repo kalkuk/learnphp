@@ -1,14 +1,13 @@
 <?php
-$bool = true && true;
-var_dump($bool);
-$bool = true && false;
-var_dump($bool);
-$bool = false && false;
-var_dump($bool);
-$bool = false || true;
-var_dump($bool);
-$bool = !false;
-$bool = false || true && true || !false ;
-var_dump($bool);
+$a=0;
+$b=1;
+while($b<4_000_000){
+    $temp =$b;
+    $b += $a;
+    $a= $temp;
+    //if($b%2 === 0)
+
+    var_dump($b);
+}
 
 
