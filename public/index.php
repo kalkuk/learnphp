@@ -6,7 +6,7 @@ spl_autoload_register(function ($class){
     require_once __DIR__ . "/../src/$class.php";
 });
 
-     require_once __DIR__ . "/../routes.php";
+require_once __DIR__ . "/../routes.php";
 
 use App\DB;
 
@@ -25,7 +25,7 @@ if($match){
     
 } else {
     http_response_code(404);
-    include './404.php'; 
+    require 'views/404.php'; 
 }
 $db = new App\DB();
 $controller = new App\Controllers\PublicController();

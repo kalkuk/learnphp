@@ -1,18 +1,19 @@
 <?php
 namespace App\Controllers;
 
+use App\Models\Article;
+
 class PublicController {
     public function index(){
-        $name = 'Merle';
-        $list = ['sai', 'leib', 'piim', 'viin'];
-        include './index.php';
+        $articles = Article::all();
+        include 'views/index.php';
     }
 
     public function about(){
-        include './about.php';
+        include 'views/about.php';
     }
 
     public function contacts(){
-        include './contacts.php';
+        include 'views/contacts.php';
     }
 }

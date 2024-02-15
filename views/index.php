@@ -1,8 +1,18 @@
 <?php include 'partials/header.php' ?> 
-    <h1>Hello <?=$name?></h1>
-    <ul>
-        <?php foreach($list as $element): ?>
-            <li><?=$element?></li>
+    
+    <div class="row">
+        <?php foreach($articles as $article): ?>
+            <div class="col-3 my-3">
+                <div class="card">
+                <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                        <h5 class="card-title"><?=$article->title?></h5>
+                        <p class="card-text"><?=$article->title?></p>
+                        <a href="#" class="btn btn-primary">BUTTON</a>
+                    </div>
+                </div>
+            </div>
         <?php endforeach; ?>
-    </ul>
+    </div>
+    
 <?php include 'partials/footer.php' ?> 
