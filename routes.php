@@ -2,6 +2,7 @@
 
 use App\Controllers\ArticlesController;
 use App\Controllers\PublicController;
+use App\Controllers\AuthController;
 use App\Router;
 
 Router::get('/', [PublicController::class, 'index']);

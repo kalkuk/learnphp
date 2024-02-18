@@ -3,7 +3,7 @@
 
 <nav class="navbar fixed-bottom bg-body-tertiary ">
   <div class="container-fluid justify-content-center">
-    <a class="navbar-brand " href="#">copyright TPT 2023</a>
+    <a class="navbar-brand " href="#"><small>copyright TPT 2023</small></a>
   </div>
 </nav>
     

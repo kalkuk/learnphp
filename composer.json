@@ -1,0 +1,12 @@
+{
+    "name": "merle/learnphp",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "require": {
+        "symfony/var-dumper": "^7.0"
+    }
+}
