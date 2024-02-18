@@ -11,8 +11,6 @@ class PublicController {
 
     public function about(){
         $articles = Article::all();
-        dump($articles);
-        dd($articles);
         include 'views/about.php';
     }
 

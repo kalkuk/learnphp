@@ -7,7 +7,7 @@
     </div>
     <div class="my-3 col-9">
         <label for="password" class="form-label">Password</label>
-        <input type="password" value="<?=$user->password?>" class="form-control" id="password" placeholder="Password" name="password">
+        <input type="password" class="form-control" id="password" placeholder="Password" name="password">
     </div>
     <input type="submit" class="btn btn-primary" value="Update">
 </form>

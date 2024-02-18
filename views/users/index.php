@@ -1,6 +1,6 @@
 <?php include 'views/partials/header.php' ?>
    
-    <a href="/admin/users/new" class="btn btn-primary">New User</a>
+    <a href="/admin/users/new" class="btn btn-primary my-2">New User</a>
     <table class="table table-striped table-hover">
         <thead>
             <th>Id</th>

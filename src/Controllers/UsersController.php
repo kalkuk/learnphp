@@ -24,7 +24,7 @@ class UsersController {
     public function store() {
         $user= new User();
         $user ->email = $_POST['email'];
-        $user ->password = $_POST['password'];
+        $user->password = password_hash($_POST['password'], PASSWORD_BCRYPT);
         $user ->save();
         header('Location: /admin/users');
     
@@ -43,7 +43,9 @@ class UsersController {
     public function update() {
         $user = User::find($_GET['id']);
         $user ->email = $_POST['email'];
-        $user ->password = $_POST['password'];
+        if (!empty($_POST['password'])) {
+            $user->password = password_hash($_POST['password'], PASSWORD_BCRYPT);
+        }
         $user ->save();
         header('Location: /admin/users');
     }
