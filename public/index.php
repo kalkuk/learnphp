@@ -9,8 +9,6 @@ unset($_SESSION['hasErrors']);
 require_once __DIR__ . "/../helpers.php";
 require_once __DIR__ . "/../routes.php";
 
-use App\DB;
-
 $router = new App\Router($_SERVER['REQUEST_URI'], $_SERVER['REQUEST_METHOD']);
 $match = $router->match();
 if($match){
@@ -31,22 +29,4 @@ if($match){
 if(!isset($_SESSION['hasErrors'])) {
     unset($_SESSION['error']);
 }
-$db = new App\DB();
-$controller = new App\Controllers\PublicController();
-/* switch($_SERVER['REQUEST_URI']){
-     case '/':
-        $name = 'Merle';
-        $list =['sai', 'leib', 'piim', 'juust'];
-        include './index.php';
-        break;
-    case '/about':
-        include './about.php';
-        break;
-    case '/contacts':
-        include './contacts.php';
-        break;
-    default:
-        http_response_code(404);
-       include 'views/partials/404.php';
-       break;
-} */
+

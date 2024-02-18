@@ -13,4 +13,8 @@
             <td><?=$user->password?></td>
         </tr>
     </table>
+    <div class="d-grid gap-2 d-md-flex  justify-content-center">
+    <a href="/admin/users" class="btn btn-primary my-2">Back</a>
+    </div>
 <?php include 'views/partials/footer.php' ?>
+

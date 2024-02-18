@@ -5,12 +5,24 @@ use stdClass;
 
 class Router{
     public static $routes = [];
+    public static $currentRouter;
     public $path;
+    public $firstDir;
+    public $file;
     public $method;
+
     public function __construct($path, $method)
     {
         $this->path = parse_url($path, PHP_URL_PATH);
+        $dirParts = explode('/', trim($this->path, '/'));
+        $this->firstDir = '/' . array_shift($dirParts);
+        $this->file = implode('/', $dirParts);
         $this->method = $method;
+        static::$currentRouter = $this;
+    }
+
+    public static function getCurrent() {
+        return static::$currentRouter;
     }
 
     public function match(){
@@ -19,6 +31,11 @@ class Router{
                 return $route;
             }
         }
+        foreach(self::$routes as $route){
+            if($route['path'] === $this->firstDir && $route['method'] === $this->method){
+                return $route;
+            }
+        }   
     }
     
     public static function addRoute($method, $path, $action){

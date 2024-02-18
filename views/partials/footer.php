@@ -3,7 +3,7 @@
 
 <nav class="navbar fixed-bottom bg-body-tertiary">
   <div class="container-fluid justify-content-center">
-    <a class="navbar-brand" href="#"><img src="/assets/tpt.svg" alt="TPT"  class="d-inline-block align-text-top">
+    <a class="navbar-brand" href="#"><img src="/assets/tpt.svg" height="20px" alt="TPT"  class="d-inline-block align-text-top">
     copyright 2024
     </a>
   </div>

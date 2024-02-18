@@ -1,6 +1,7 @@
 <?php
 
 use App\Controllers\ArticlesController;
+use App\Controllers\AssetController;
 use App\Controllers\PublicController;
 use App\Controllers\AuthController;
 use App\Controllers\UsersController;
@@ -53,4 +54,4 @@ Router::post('/admin/users/edit', [UsersController::class, 'update']);
 
 Router::get('/admin/users/delete', [UsersController::class, 'destroy']);
 
-   
+Router::get('/assets', [AssetController::class, 'show']);
