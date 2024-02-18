@@ -10,6 +10,7 @@ class PublicController {
     }
 
     public function about(){
+        $articles = Article::all();
         include 'views/about.php';
     }
 

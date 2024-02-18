@@ -6,11 +6,13 @@ spl_autoload_register(function ($class){
     require_once __DIR__ . "/../src/$class.php";
 });
 
+session_start(['cookie_httponly' => true]);
+
 require_once __DIR__ . "/../routes.php";
 
 use App\DB;
 
-$router = new App\Router($_SERVER['REQUEST_URI']);
+$router = new App\Router($_SERVER['REQUEST_URI'], $_SERVER['REQUEST_METHOD']);
 $match = $router->match();
 if($match){
     if(is_callable($match['action'])){
