@@ -23,6 +23,9 @@
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="/admin/articles">Articles</a></li>
           </ul>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/admin/users">Users</a></li>
+          </ul>
         </li>
         <?php endif ?>
       </ul>
